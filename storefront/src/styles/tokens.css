@@ -1,0 +1,75 @@
+/* src/styles/tokens.css */
+:root {
+  /* Brand */
+  --tz-primary: #00b3a6;
+  --tz-primary-600: #009a90;
+  --tz-primary-700: #007d76;
+
+  /* Neutros */
+  --tz-bg: #ffffff;
+  --tz-bg-soft: #f6f7f8;
+  --tz-fg: #111827;
+  --tz-muted: #6b7280;
+  --tz-border: #e5e7eb;
+
+  /* Estados */
+  --tz-success: #10b981;
+  --tz-warning: #f59e0b;
+  --tz-danger:  #ef4444;
+
+  /* Layout */
+  --tz-radius: 12px;
+  --tz-shadow-sm: 0 1px 2px rgba(0,0,0,.06);
+  --tz-shadow-md: 0 4px 10px rgba(0,0,0,.08);
+  --tz-container: 1240px;
+}
+
+/* Tipografía opcional */
+:root {
+  --tz-font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+/* Utilidades opcionales */
+.container {
+  max-width: var(--tz-container);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+@keyframes slideOut {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+.animate-fadeIn { animation: fadeIn 0.3s ease-out forwards; }
+.animate-fadeOut { animation: fadeOut 0.3s ease-in forwards; }
+.animate-slideIn { animation: slideIn 0.3s ease-out forwards; }
+.animate-slideOut { animation: slideOut 0.3s ease-in forwards; }
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeInDown 0.25s ease-out forwards;
+}
